@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Otra Página</title>
+</head>
+<body>
+    <h1>Bienvenido a Otra Página</h1>
+    <p>Nombre: <span id="nombre"></span></p>
+    <p>Correo: <span id="correo"></span></p>
+
+    <script>
+        // Obtener los parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        // Asignar los valores a los elementos HTML
+        document.getElementById("nombre").textContent = params.get("nombre") || "Nombre no encontrado";
+        document.getElementById("correo").textContent = params.get("correo") || "Correo no encontrado";
+    </script>
+</body>
+</html>

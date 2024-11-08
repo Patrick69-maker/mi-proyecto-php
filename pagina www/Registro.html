@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Completo</title>
+</head>
+<body>
+    <h1>Registro Completo</h1>
+    <p>Nombre: <span id="nombre"></span></p>
+    <p>Correo: <span id="correo"></span></p>
+
+    <script>
+        // Obtener parámetros de la URL para método GET
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("nombre").textContent = params.get("nombre");
+        document.getElementById("correo").textContent = params.get("correo");
+    </script>
+</body>
+</html>
